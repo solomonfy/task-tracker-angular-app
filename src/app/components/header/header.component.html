@@ -1,0 +1,13 @@
+<header>
+  <h1 *ngIf="hasRoute('/')">
+    {{ title }}
+  </h1>
+
+  <!-- *ngIf="hasRoute('/')" checks if the router is '/' or home page and displays the button-->
+  <app-button
+    *ngIf="hasRoute('/')"
+    color="{{ showAddTask ? 'red' : 'green' }}"
+    text="{{ showAddTask ? ' X ' : ' + Task' }}"
+    (btnClick)="toggleAddTask()"
+  ></app-button>
+</header>

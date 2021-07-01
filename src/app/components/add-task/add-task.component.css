@@ -1,0 +1,10 @@
+.add-form {
+margin: 15px;
+}
+
+.new-task-form {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}

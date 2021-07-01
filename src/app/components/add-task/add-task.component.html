@@ -1,0 +1,38 @@
+<div class="new-task-form">
+  <form class="add-form" (ngSubmit)="onSubmit()" *ngIf="showAddTask">
+    <div class="form-control">
+      <label for="text">Task</label>
+      <input
+        name="text"
+        id="text"
+        type="text"
+        placeholder="Enter task "
+        [(ngModel)]="text"
+      />
+    </div>
+
+    <div class="form-control">
+      <label for="dat">Day & Time</label>
+
+      <input
+        name="day"
+        id="day"
+        type="datetime-local"
+        [(ngModel)]="day"
+        value="2018-06-12T19:30"
+        min="datetime-local"
+      />
+    </div>
+
+    <div class="form-control form-control-check">
+      <label for="reminder">Set Reminder</label>
+      <input
+        name="reminder"
+        id="reminder"
+        type="checkbox"
+        [(ngModel)]="reminder"
+      />
+    </div>
+    <input type="submit" value="Save Task" class="btn btn-block" />
+  </form>
+</div>

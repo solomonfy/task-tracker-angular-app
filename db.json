@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "text": "New",
+      "day": "Day 12",
+      "reminder": true,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "text": "Meeting at School",
+      "day": "May 6th at 1:30pm",
+      "reminder": false
+    },
+    {
+      "id": 3,
+      "text": "Food Shopping",
+      "day": "May 7th at 12:30pm",
+      "reminder": false
+    },
+    {
+      "id": 4,
+      "text": "Looking for rental house",
+      "day": "Jult 7th at 12:30pm",
+      "reminder": true
+    },
+    {
+      "id": 5,
+      "text": "Task 5",
+      "day": "May 7th at 12:30pm",
+      "reminder": true
+    },
+    {
+      "text": "New",
+      "day": "2021-07-24T16:26",
+      "reminder": false,
+      "id": 6
+    }
+  ]
+}
