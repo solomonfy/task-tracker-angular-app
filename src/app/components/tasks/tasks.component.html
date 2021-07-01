@@ -1,8 +1,15 @@
-<p style="text-decoration: underline; font-size: 18px; font-weight: 100px">
+<p style="text-decoration: underline; font-size: 18px; font-weight: 1000; text-align: center">
   List of Tasks ({{ tasks.length }})
 </p>
-
 <app-add-task (onAddTask)="addTask($event)"></app-add-task>
+
+
+<p style="text-decoration: underline; font-size: 18px; font-weight: 1000;">
+  With reminder ({{ tasks.length }})
+</p>
+<span style="text-decoration: underline; font-size: 18px; font-weight: 1000; text-align: center">
+  No reminder ({{ tasks.length }})
+</span>
 
 <app-task-item
   *ngFor="let task of tasks"

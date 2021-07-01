@@ -11,6 +11,8 @@ body {
 }
 
 .container {
+  background-image: linear-gradient(to right, #ffb347, #ffcc33);
+  /* background-color: rgb(182, 155, 155); */
   max-width: 500px;
   margin: 30px auto;
   overflow: auto;
