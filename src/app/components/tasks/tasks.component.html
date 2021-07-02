@@ -5,10 +5,10 @@
 
 
 <p style="text-decoration: underline; font-size: 18px; font-weight: 1000;">
-  With reminder ({{ tasks.length }})
+  With reminder ({{ tasksWithReminder.length }})
 </p>
-<span style="text-decoration: underline; font-size: 18px; font-weight: 1000; text-align: center">
-  No reminder ({{ tasks.length }})
+<span style="text-decoration: underline; font-size: 18px; font-weight: 1000;">
+  No reminder ({{ tasks.length - tasksWithReminder.length }})
 </span>
 
 <app-task-item
