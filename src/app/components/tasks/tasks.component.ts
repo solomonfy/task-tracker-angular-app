@@ -21,7 +21,7 @@ export class TasksComponent implements OnInit {
 
   deleteTask(task: Task) {
     // console.log(task)
-    alert("Are you sure?")
+    alert('Are you sure?');
     this.taskService
       .deleteTask(task)
       .subscribe(
@@ -41,11 +41,7 @@ export class TasksComponent implements OnInit {
   }
 
   countTasksWithReminder(tasks: Task[]) {
-    this.tasks.map((task) => {
-      if (task.reminder) {
-        this.tasksWithReminder.push(task);
-      }
-    });
+    this.tasksWithReminder = this.tasks.filter((task) => task.reminder);
     return this.tasksWithReminder;
   }
 }

@@ -1,22 +1,22 @@
 {
   "tasks": [
     {
-      "text": "New",
-      "day": "Day 12",
-      "reminder": false,
-      "id": 1
+      "id": 1,
+      "text": "Meeting",
+      "day": "Jan 14th at 11:30am",
+      "reminder": true
     },
     {
       "id": 2,
       "text": "Meeting at School",
       "day": "May 6th at 1:30pm",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 3,
       "text": "Food Shopping",
       "day": "May 7th at 12:30pm",
-      "reminder": false
+      "reminder": true
     },
     {
       "id": 4,
@@ -25,10 +25,10 @@
       "reminder": true
     },
     {
-      "id": 5,
-      "text": "Task 5",
-      "day": "May 7th at 12:30pm",
-      "reminder": true
+      "text": "Nathan's checkup",
+      "day": "2021-08-12T13:00",
+      "reminder": true,
+      "id": 6
     }
   ]
 }
