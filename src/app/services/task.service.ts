@@ -24,20 +24,23 @@ export class TaskService {
   }
 
   deleteTask(task: Task): Observable<Task> {
-    const url = `${this.apiURL}/${task.id}`;
+    const url = `${this.apiURL}/${task._id}`;
     return this.http.delete<Task>(url);
   }
 
   updateTaskReminder(task: Task): Observable<Task> {
-    const url = `${this.apiURL}/${task.id}/update`;
+    const url = `${this.apiURL}/${task._id}/update`;
     const body = { reminder: task.reminder };
-    console.log(task.id);
+    console.log(task._id);
     return this.http.put<Task>(url, task, httpOptions);
   }
 
 
   addTask(task: Task): Observable<Task> {
-    return this.http.post<Task>(this.apiURL, task, httpOptions)
+    const url = `${this.apiURL}/addTask`;
+    console.log(url);
+    console.log(task);
+    return this.http.post<Task>(url, task, httpOptions)
   }
 
 }
