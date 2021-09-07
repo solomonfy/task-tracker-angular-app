@@ -7,12 +7,22 @@
   <h3>
     {{ task.text }}
 
-    <fa-icon
-      (click)="onDelete(task)"
-      [icon]="faTimes"
-      [ngStyle]="{ color: 'red' }"
-    >
-    </fa-icon>
+    <div>
+      <fa-icon
+        (click)="onDelete(task)"
+        [icon]="faEdit"
+        [ngStyle]="{ color: 'green' }"
+      >
+      </fa-icon>
+
+      <fa-icon
+        (click)="onDelete(task)"
+        [icon]="faTimes"
+        [ngStyle]="{ color: 'red' }"
+      >
+      </fa-icon>
+    </div>
   </h3>
+
   <p>{{ task.day }}</p>
 </div>

@@ -32,7 +32,7 @@ export class TaskService {
   updateTaskReminder(task: Task): Observable<Task> {
     const url = `${this.apiURL}/edit/${task._id}`;
     const body = { reminder: task.reminder };
-    console.log(task._id);
+    // console.log(task._id);
     return this.http.put<Task>(url, task, httpOptions);
   }
 
@@ -41,5 +41,11 @@ export class TaskService {
     const url = `${this.apiURL}/addTask`;
     return this.http.post<Task>(url, task, httpOptions)
   }
+
+  editTask(task: Task): Observable<Task> {
+    const url = `${this.apiURL}/addTask`;
+    return this.http.post<Task>(url, task, httpOptions)
+  }
+
 
 }

@@ -40,6 +40,11 @@ export class TasksComponent implements OnInit {
     this.taskService.addTask(task).subscribe((task) => this.tasks.push(task));
   }
 
+  editTask(task: Task) {
+    // console.log(task)
+    this.taskService.editTask(task).subscribe((task) => this.tasks.push(task));
+  }
+
   countTasksWithReminder(tasks: Task[]) {
     this.tasksWithReminder = this.tasks.filter((task) => task.reminder);
     return this.tasksWithReminder;
