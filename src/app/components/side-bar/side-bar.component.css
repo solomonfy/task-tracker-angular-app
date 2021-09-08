@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+
 body {
   font-family: "Poppins", "Muli", sans-serif;
   color: rgba(0, 0, 0, 0.8);
@@ -180,7 +179,7 @@ body {
 }
 .profile #log_out {
   position: absolute;
-  left: 88%;
+  left: 95%;
   bottom: 5px;
   transform: translateX(-50%);
   min-width: 50px;
