@@ -25,7 +25,8 @@ export class TasksComponent implements OnInit {
     this.taskService
       .deleteTask(task)
       .subscribe(
-        () => (this.tasks = this.tasks.filter((value) => value._id !== task._id))
+        () =>
+          (this.tasks = this.tasks.filter((value) => value._id !== task._id))
       );
   }
 
@@ -35,8 +36,13 @@ export class TasksComponent implements OnInit {
     //  console.log(task)
   }
 
+  capitalize(text: string) {
+    return text[0].toUpperCase() + text.slice(1);
+  }
+
   addTask(task: Task) {
     // console.log(task)
+    task.text = this.capitalize(task.text);
     this.taskService.addTask(task).subscribe((task) => this.tasks.push(task));
   }
 
