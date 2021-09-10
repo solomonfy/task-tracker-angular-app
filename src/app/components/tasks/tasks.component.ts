@@ -42,8 +42,10 @@ export class TasksComponent implements OnInit {
 
   addTask(task: Task) {
     // console.log(task)
-    task.text = this.capitalize(task.text);
-    this.taskService.addTask(task).subscribe((task) => this.tasks.push(task));
+    if (task.text !== "" && task.day !== "") {
+      task.text = this.capitalize(task.text);
+      this.taskService.addTask(task).subscribe((task) => this.tasks.push(task));
+    }
   }
 
   editTask(task: Task) {

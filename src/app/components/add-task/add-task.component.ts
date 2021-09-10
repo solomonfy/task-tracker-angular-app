@@ -28,19 +28,14 @@ export class AddTaskComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    if (!this.text || !this.day) {
-      alert('Please add a task and date');
-      return;
+    if (this.text === "") {
+      alert('Please add a task text');
+  
     }
-    // if (!this.text) {
-    //   alert('Please add a task');
-    // }
-    // else if(!this.day){
-    //   alert('Please add date and time');
-    // }
-    // else {
-    //   return;
-    // }
+    if (this.day === "") {
+      alert('Please add a date');
+    }
+   
 
     const newTask = {
       text: this.text.charAt(0).toUpperCase() + this.text.slice(1),
