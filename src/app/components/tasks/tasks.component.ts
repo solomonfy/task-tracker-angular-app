@@ -33,24 +33,18 @@ export class TasksComponent implements OnInit {
   toggleReminder(task: Task) {
     task.reminder = !task.reminder;
     this.taskService.updateTaskReminder(task).subscribe();
-    //  console.log(task)
-  }
-
-  capitalize(text: string) {
-    return text[0].toUpperCase() + text.slice(1);
   }
 
   addTask(task: Task) {
     // console.log(task)
-    if (task.text !== "" && task.day !== "") {
-      task.text = this.capitalize(task.text);
+    if (task.text !== '' && task.day !== '') {
       this.taskService.addTask(task).subscribe((task) => this.tasks.push(task));
     }
   }
 
   editTask(task: Task) {
     // console.log(task)
-    this.taskService.editTask(task).subscribe((task) => this.tasks.push(task));
+    this.taskService.editTask(task).subscribe();
   }
 
   countTasksWithReminder(tasks: Task[]) {
